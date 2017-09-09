@@ -50,15 +50,18 @@ static char *_sel_message( FmFileInfoList *files, gint n_files )
 	ret = avformat_open_input( &fmt_ctx, filename, NULL, NULL );
 	free( filename );
 	if ( ret < 0 ) {
+		avformat_close_input( &fmt_ctx );
 		return NULL;
 	}
 	
 	ret = avformat_find_stream_info( fmt_ctx, NULL );
 	if ( ret < 0 ) {
+		avformat_close_input( &fmt_ctx );
 		return NULL;
 	}
 	
 	if ( fmt_ctx->probe_score < 50 ) {
+		avformat_close_input( &fmt_ctx );
 		return NULL;
 	}
 	
@@ -68,6 +71,7 @@ static char *_sel_message( FmFileInfoList *files, gint n_files )
 		strcmp( fmt_ctx->iformat->name, "gif" ) == 0 ||
 		strcmp( fmt_ctx->iformat->name, "tty" ) == 0
 	) {
+		avformat_close_input( &fmt_ctx );
 		return NULL;
 	}
 	
@@ -86,6 +90,7 @@ static char *_sel_message( FmFileInfoList *files, gint n_files )
 	}
 	
 	if ( has_audio == 0 && has_video == 0 ) {
+		avformat_close_input( &fmt_ctx );
 		return NULL;
 	}
 	
