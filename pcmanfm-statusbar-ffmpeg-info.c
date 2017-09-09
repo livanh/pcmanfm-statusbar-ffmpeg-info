@@ -92,7 +92,7 @@ static char *_sel_message( FmFileInfoList *files, gint n_files )
 	if ( fmt_ctx->duration > 0 ) {
 		int duration = fmt_ctx->duration / (float)AV_TIME_BASE;
 		if ( duration > 3600 ) {
-			duration_string = g_strdup_printf( "[%d:%02d:%02.2f]", duration/3600, (duration%3600)/60, duration%60 );
+			duration_string = g_strdup_printf( "[%d:%02d:%02d]", duration/3600, (duration%3600)/60, duration%60 );
 		} else {
 			duration_string = g_strdup_printf( "[%d:%02d]", duration/60, duration%60 );
 		}
