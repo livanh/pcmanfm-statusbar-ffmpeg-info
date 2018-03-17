@@ -23,7 +23,6 @@ Then compile and install:
 make
 sudo make install
 ```
-The plugin is installed in /usr/lib/x86_64-linux-gnu/pcmanfm, which is fine for 64-bit systems. For 32-bit, change x86_64 to i386 in the Makefile.
 
 ### Contacts
 <livanh@bulletmail.org>
