@@ -1,0 +1,22 @@
+Source: pcmanfm-statusbar-ffmpeg-info
+Maintainer: Livanh <livanh@bulletmail.org>
+Section: utils
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9), gcc, libtool, libfm-dev, libavcodec-dev, libavformat-dev, libavutil-dev
+
+Package: pcmanfm-statusbar-ffmpeg-info
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, pcmanfm, libavcodec57, libavformat57, libavutil55
+Priority: optional
+Section: utils
+Description: PCManFm plugin to show audio/video file info in the statusbar using FFmpeg libraries
+ This plugin shows a number of technical information about audio and video files (MP3, AVI, MKV...). A typical description has the following structure:
+ .
+ [<duration>][ | <video codec>[, <bitrate>][, <resolution>][, <frame rate>]][ | <audio codec>[, <bitrate>][, <sampling rate>][, <channels>]] 
+ .
+ An actual example is:
+ .
+ [3:42] | h264, 278 kbps, 640x630, 29,97 fps | aac, 95 kbps, 44 khz, stereo
+ .
+ Fields which can't be detected are omitted. If a file contains no audio or no video, the corresponding block is omitted. 
