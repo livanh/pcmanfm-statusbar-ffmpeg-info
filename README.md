@@ -25,4 +25,4 @@ sudo make install
 ```
 
 ### Contacts
-<livanh@bulletmail.org>
+<livanh@protonmail.com>
