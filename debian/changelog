@@ -1,4 +1,12 @@
-pcmanfm-statusbar-ffmpeg-info (0.1-1) UNRELEASED; urgency=low
+pcmanfm-statusbar-ffmpeg-info (0.1-2) testing; urgency=medium
+
+  * Changed email address
+  * Update libav* dependencies
+  * Fix architecture
+
+ -- Livanh <livanh@protonmail.com>  Sun, 09 Dec 2018 12:34:29 +0100
+
+pcmanfm-statusbar-ffmpeg-info (0.1-1) testing; urgency=low
 
   * Initial release.
 
