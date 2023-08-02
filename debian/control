@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 9), gcc, libtool, libfm-dev, libavcodec-dev, libavf
 
 Package: pcmanfm-statusbar-ffmpeg-info
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, pcmanfm, libavcodec58, libavformat58, libavutil56
+Depends: ${shlibs:Depends}, ${misc:Depends}, pcmanfm
 Priority: optional
 Section: utils
 Description: PCManFm plugin to show audio/video file info in the statusbar using FFmpeg libraries
