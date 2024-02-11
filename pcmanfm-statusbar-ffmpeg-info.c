@@ -42,8 +42,6 @@ static char *_sel_message( FmFileInfoList *files, gint n_files )
 		return NULL;
 	}
 	
-	av_register_all();
-	
 	fi = fm_file_info_list_peek_head( files );
 	
 	filename = fm_path_to_str( fm_file_info_get_path( fi ) );
@@ -176,9 +174,9 @@ static char *_sel_message( FmFileInfoList *files, gint n_files )
 			n_fields++;
 		}
 		
-		if( aparam->channels > 0 ) {
+		if( aparam->ch_layout.nb_channels > 0 ) {
 			char channels_description[20];
-			av_get_channel_layout_string( channels_description, 20, aparam->channels, aparam->channel_layout );
+			av_channel_layout_describe( &aparam->ch_layout, channels_description, 20 );
 			fields_array[n_fields] = g_strdup_printf( "%s", channels_description );
 			n_fields++;
 		}
