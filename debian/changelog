@@ -1,3 +1,9 @@
+pcmanfm-statusbar-ffmpeg-info (0.2-2) testing; urgency=medium
+
+  * Update build dependencies
+
+ -- Livanh <livanh@protonmail.com>  Mon, 12 Aug 2024 12:57:31 +0200
+
 pcmanfm-statusbar-ffmpeg-info (0.2-1) testing; urgency=medium
 
   * Upstream version v0.2
